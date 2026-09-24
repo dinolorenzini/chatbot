@@ -7,10 +7,7 @@ public class Magpie
      */
     public String getGreeting()
     {
-        String[] greetings = {"Hello my dearest friend!", "You seem curious, whats the question of the day?", "Hey, I'm over here!", "Is that pizza?", "Oh. You again.", "Well, I mean I guess. How can I help you.", "Welcome to Magpie, what can I get for you?"};
-        int greetingsLength = greetings.length;
-        int greetingSelector = (int)(Math.random() * (greetingsLength + 1);
-        return greetings[greetingSelector];
+        return Responses.getRandomResponse("greeting");
     }
     
     /**
@@ -23,13 +20,14 @@ public class Magpie
      * 
      * @return a response based on the rules given
      */
-    public String getResponse(String statement)
+    public String getContextualizedResponse(String statement)
     {
         if (statement.contains("no")) {
-            return getResponse("contain.negative");
+            return Responses.getResponse("context.negative");
         } else if (statement.contains("mother") || statement.contains("brother") || statement.contains("sister") || statement.contains("father")) {
-            return getResponse("contain.family");
+            return Responses.getResponse("context.family");
         }
+        return Responses.getResponse("system.noCmdFound");
     }
     
     /**
@@ -39,6 +37,6 @@ public class Magpie
      */
     public String getRandomResponse()
     {
-        
+        return Responses.getRandomResponse("random");
     }
 }
