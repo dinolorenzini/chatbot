@@ -31,7 +31,7 @@ public class Responses {
         // Class: context | Desc: For things that look for text that contains itself (non-random) (from user context)
         responses.put("context.negative", "Why so negative?");
         responses.put("context.family", "Tell me more about your family!");
-        responses.put("context.math", "So, are you taking any math courses?);
+        responses.put("context.math", "So, are you taking any math courses?");
         responses.put("context.hit", "I don't like violence. Let's change the subject.");
         responses.put("context.wuest", "I hear he is one swell guy!");
         responses.put("context.emptyInput", "Please say something, I beg you.");
