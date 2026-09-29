@@ -22,7 +22,9 @@ public class Magpie
      */
     public String getContextualizedResponse(String statement)
     {
-        if (statement.contains("no")) {
+        if (statement.isBlank()) {
+            return Responses.getResponse("context.emptyInput");
+        } else if (statement.contains("no")) {
             return Responses.getResponse("context.negative");
         } else if (statement.contains("mother") || statement.contains("brother") || statement.contains("sister") || statement.contains("father")) {
             return Responses.getResponse("context.family");
