@@ -26,7 +26,14 @@ public class Magpie
             return Responses.getResponse("context.negative");
         } else if (statement.contains("mother") || statement.contains("brother") || statement.contains("sister") || statement.contains("father")) {
             return Responses.getResponse("context.family");
+        } else if (statement.contains("math")) {
+            return Responses.getResponse("context.math");
+        } else if (statement.contains("hit")) {
+            return Responses.getResponse("context.hit");
+        } else if (statement.contains("wuest")) {
+            return Responses.getResponse("context.wuest");
         }
+        // if nothing is found
         return Responses.getResponse("system.noCmdFound");
     }
     
