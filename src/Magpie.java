@@ -16,7 +16,7 @@ public class Magpie
     *
     */
     public int findKeyword(String statement, String goal) {
-
+        return 0;
     }
     
     /**

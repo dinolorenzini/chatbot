@@ -22,8 +22,15 @@ public class MagpieRunner
 
         // Loop Scanner
         while (!statement.toLowerCase().equals("bye")) {
+            System.out.print(">");
             statement = in.nextLine();
-            System.out.println("You said: " + statement);
+            if (statement.isEmpty()) {
+                System.out.println(Responses.getResponse("context.emptyInput"));
+            }
+            else {
+                if (_DEBUG)
+                    System.out.println("You said: " + statement);
+            }
         }
     }
 
