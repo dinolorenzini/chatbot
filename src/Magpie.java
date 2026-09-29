@@ -9,6 +9,15 @@ public class Magpie
     {
         return Responses.getRandomResponse("greeting");
     }
+
+    /**
+    *
+    * Detect if the exact word is inside of the phrase
+    *
+    */
+    public int findKeyword(String statement, String goal) {
+
+    }
     
     /**
      * Gives a response to a user statement, the response should meet the following 3 conditions:
