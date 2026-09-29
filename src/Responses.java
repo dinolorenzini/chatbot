@@ -34,6 +34,7 @@ public class Responses {
         responses.put("context.math", "So, are you taking any math courses?);
         responses.put("context.hit", "I don't like violence. Let's change the subject.");
         responses.put("context.wuest", "I hear he is one swell guy!");
+        responses.put("context.emptyInput", "Please say something, I beg you.");
         // Class: random | Desc: Random statements and questions
         responses.put("random.introduction", "Well, my name is Magpie. What is your name?");
         responses.put("random.howareyou", "Well looks like I've found myself stuck in a hole. How are you, anyway?");
