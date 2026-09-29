@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class MagpieRunner
 {
-    public static boolean _DEBUG = false;
+    public static boolean _DEBUG = true;
     /**
      * 1) Create a while loop so the program should continue to run as long as the word "Bye"       			
      *    doesn't appear.
@@ -30,6 +30,7 @@ public class MagpieRunner
             else {
                 if (_DEBUG)
                     System.out.println("You said: " + statement);
+                System.out.println(maggie.getResponse(statement));
             }
         }
     }
