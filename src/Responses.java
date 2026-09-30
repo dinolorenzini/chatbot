@@ -38,8 +38,8 @@ public class Responses {
         // Class: random | Desc: Random statements and questions
         responses.put("random.introduction", "Well, my name is Magpie. What is your name?");
         responses.put("random.howareyou", "Well looks like I've found myself stuck in a hole. How are you, anyway?");
-        responses.put("random.three", "3");
-        responses.put("random.four", "4");
+        responses.put("random.playground", "Have you ever played on a playground?");
+        responses.put("random.wuest", "What are your thoughts on Mr. Wuest?");
         // Class: system | Desc: for things system related, such as errors
         responses.put("system.error", "Woah, Magpie encountered an error");
         responses.put("system.about", "I am Magpie. Emperor of the thirty islands.");
