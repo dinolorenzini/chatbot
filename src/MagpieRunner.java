@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class MagpieRunner
 {
-    public static boolean _DEBUG = true;
+    public static boolean _DEBUG = false;
     /**
      * 1) Create a while loop so the program should continue to run as long as the word "Bye"       			
      *    doesn't appear.
@@ -12,27 +12,20 @@ public class MagpieRunner
         Magpie maggie = new Magpie();
         Scanner in = new Scanner(System.in);
         Responses.initialize();
-        String statement = "";
 
-        if (_DEBUG)
-            System.out.println(Responses.getResponse("greeting.friend"));
-
-        // Greeting
+           // Greeting
         System.out.println(maggie.getGreeting());
+        String statement = in.nextLine();
 
         // Loop Scanner
         while (!statement.toLowerCase().equals("bye")) {
             System.out.print(">");
+            System.out.println(maggie.getResponse(statement));
             statement = in.nextLine();
-            if (statement.isEmpty()) {
-                System.out.println(Responses.getResponse("context.emptyInput"));
-            }
-            else {
-                if (_DEBUG)
-                    System.out.println("You said: " + statement);
-                System.out.println(maggie.getResponse(statement));
+
+
             }
         }
-    }
+
 
 }

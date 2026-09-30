@@ -121,18 +121,18 @@ public class Magpie
         // First, we check for a blank statement
         if (statement.isBlank()) {
             return Responses.getResponse("context.emptyInput");
-        } else if (statement.contains("i want to")) {
+        } else if (findKeyword(statement,"i want to") != -1) {
             return transformIWantToStatement(statement);
             // Then we move on to keyword scanning
-        } else if (statement.contains("no")) {
+        } else if (findKeyword(statement,"no") != -1) {
             return Responses.getResponse("context.negative");
-        } else if (statement.contains("mother") || statement.contains("brother") || statement.contains("sister") || statement.contains("father")) {
+        } else if (findKeyword(statement,"mother") != -1 || findKeyword(statement,"brother") != -1 || findKeyword(statement,"sister") != -1 || findKeyword(statement,"father") != -1) {
             return Responses.getResponse("context.family");
-        } else if (statement.contains("math")) {
+        } else if (findKeyword(statement,"math") != -1) {
             return Responses.getResponse("context.math");
-        } else if (statement.contains("hit")) {
+        } else if (findKeyword(statement,"hit") != -1) {
             return Responses.getResponse("context.hit");
-        } else if (statement.contains("wuest")) {
+        } else if (findKeyword(statement,"wuest") != -1) {
             return Responses.getResponse("context.wuest");
         }
         // If we can't find anything, resort to a random response
